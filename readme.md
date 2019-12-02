@@ -10,23 +10,23 @@ Laravel is a web application framework with expressive, elegant syntax. We belie
 - [Robust background job processing](https://laravel.com/docs/queues).
 - [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
 
-## Используемые технологии
+## РСЃРїРѕР»СЊР·СѓРµРјС‹Рµ С‚РµС…РЅРѕР»РѕРіРёРё
 - PHP
 - MySQL
 - Apache2
 - Laravel
 
-## Информация по установке
+## РРЅС„РѕСЂРјР°С†РёСЏ РїРѕ СѓСЃС‚Р°РЅРѕРІРєРµ
 - cd domains
 - git clone https://github.com/mikhalkevich/project.git
 - cd project
 - composer self-update
 - composer install
-- создать базу с именем kit и экспортировать в нее файл kit.sql
-- Скопировать .env.example и превратить его в .env
+- СЃРѕР·РґР°С‚СЊ Р±Р°Р·Сѓ СЃ РёРјРµРЅРµРј kit Рё СЌРєСЃРїРѕСЂС‚РёСЂРѕРІР°С‚СЊ РІ РЅРµРµ С„Р°Р№Р» kit.sql
+- РЎРєРѕРїРёСЂРѕРІР°С‚СЊ .env.example Рё РїСЂРµРІСЂР°С‚РёС‚СЊ РµРіРѕ РІ .env
 
-## Название проекта
-Учебный проект разработанный на Laravel.
+## РќР°Р·РІР°РЅРёРµ РїСЂРѕРµРєС‚Р°
+РЈС‡РµР±РЅС‹Р№ РїСЂРѕРµРєС‚ СЂР°Р·СЂР°Р±РѕС‚Р°РЅРЅС‹Р№ РЅР° Laravel.
 
 
 
