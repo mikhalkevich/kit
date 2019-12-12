@@ -6,6 +6,10 @@
  CKEDITOR.replace( 'body' );
 </script>
 @endsection 
+@section('styles')
+ @parent
+  <link href="{{asset('css/app.css')}}" rel="stylesheet" />
+@endsection 
 @section('content')
 <div class="container">
     <div class="row justify-content-center">

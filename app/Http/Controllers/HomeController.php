@@ -34,10 +34,7 @@ class HomeController extends Controller
 	 $cats = Category::all();
 	 $obj = Product::where('user_id',Auth::user()->id)->where('id',$id)->first();
 	 return view('home_edit',compact('cats','obj'));
-	}
-	public function postEdit($id = null,ProductRequest $r){
-	 dd($r->all());
-	}
+	} 
 	public function getDelete($id = null){
 	 $obj = Product::where('user_id',Auth::user()->id)->where('id',$id)->first();
 	 $path = public_path().'/uploads/'.$obj->user_id.'/'.$obj->picture;

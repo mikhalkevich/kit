@@ -1,0 +1,7 @@
+body {
+  background-color: #333;
+  color: #000000;
+}
+body .btn-primary {
+  color: #000;
+}

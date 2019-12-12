@@ -8,6 +8,7 @@ Route::post('/home', 'HomeController@postIndex');
 Route::get('/home/edit/{id}','HomeController@getEdit');
 Route::get('/home/delete/{id}','HomeController@getDelete');
 Route::post('/home/edit/{id}','HomeController@postEdit');
-
+//ajax
+Route::post('/ajax/product', 'AjaxController@postIndex');
 //default always end
 Route::get('{url}','MaintextController@getIndex');

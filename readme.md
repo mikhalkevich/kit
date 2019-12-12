@@ -28,8 +28,6 @@ Laravel is a web application framework with expressive, elegant syntax. We belie
 ## Название проекта
 Учебный проект разработанный на Laravel.
 
-
-
 ## Author
 Mikhalkevich
 mikhalkevich@ya.ru

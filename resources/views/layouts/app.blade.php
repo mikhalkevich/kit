@@ -9,13 +9,10 @@
   <meta name="author" content="">
 <meta name="csrf-token" content="{{ csrf_token() }}">
   <title>{{ config('app.name', 'KIT Project') }}</title>
-
-  <!-- Bootstrap core CSS -->
   <link href="{{asset('vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
-
-  <!-- Custom styles for this template -->
   <link href="{{asset('css/simple-sidebar.css')}}" rel="stylesheet">
-
+  @section('styles')
+  @show
 </head>
 
 <body>
@@ -103,7 +100,7 @@
 
   <!-- Bootstrap core JavaScript -->
   <script src="{{asset('vendor/jquery/jquery.min.js')}}"></script>
-  <script src="{{asset('vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+  <script src="{{asset('vendor/bootstrap/js/bootstrap.min.js')}}"></script>
   @section('scripts') 
   <script>
     $("#menu-toggle").click(function(e) {
