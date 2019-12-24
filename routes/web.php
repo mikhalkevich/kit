@@ -2,6 +2,9 @@
 Auth::routes();
 Route::get('/','BaseController@getIndex');
 Route::get('category/{id}', 'CategoryController@getIndex');
+Route::get('basket', 'BasketController@getIndex');
+Route::get('basket/delete/{id}', 'BasketController@getDelete');
+Route::post('order', 'OrderController@postIndex');
 //home
 Route::get('/home', 'HomeController@index')->name('home');
 Route::post('/home', 'HomeController@postIndex');

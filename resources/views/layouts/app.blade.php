@@ -27,6 +27,25 @@
                 </a> 
 	  </div>
       <div class="list-group list-group-flush">
+	          <div id="basket">
+            <table id="bascets">
+                <tbody>
+                <tr style="display: none;" class="hPb">
+                    <td>Выбрано:</td>
+                    <td><span id="totalGoods">0</span> товаров</td>
+                    <td>Сумма: &asymp; </td>
+                    <td><span id="totalPrice">0</span> руб.</td>
+                </tr>
+                <tr style="display: table-row;" class="hPe">
+                    <td colspan="2">Корзина пуста</td>
+                </tr>
+                <tr>
+                    <td><a style="display: none;" id="clearBasket" href="#">Очистить</a></td>
+                    <td><a style="display: none;" id="checkOut" href="{{asset('basket')}}">Оформить</a></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
 	    @foreach($v_categories as $cat)
          <a href="{{asset('category/'.$cat->id)}}" class="list-group-item list-group-item-action bg-light">{{$cat->name}}</a> 
 		@endforeach
@@ -101,6 +120,8 @@
   <!-- Bootstrap core JavaScript -->
   <script src="{{asset('vendor/jquery/jquery.min.js')}}"></script>
   <script src="{{asset('vendor/bootstrap/js/bootstrap.min.js')}}"></script>
+  <script src="{{asset('js/jquery.cookie.js')}}"></script>
+  <script src="{{asset('js/cart.js')}}"></script>
   @section('scripts') 
   <script>
     $("#menu-toggle").click(function(e) {

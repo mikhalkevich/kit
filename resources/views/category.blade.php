@@ -30,10 +30,11 @@
 	 @endif
 	</div>
     <div class="card-text">{{$prod->small_body}}</div>
+    <div class="card-text">Цена {{$prod->price}} y.e.</div>
 <br style="clear:both" />	
     <a href="#" data-id="{{$prod->id}}" class="btn btn-primary btn-sm my_modal">Открыть</a>
     <a href="#" data-id="{{$prod->id}}" class="btn btn-primary btn-sm go">Перейти</a>
-    <a href="#" data-id="{{$prod->id}}" class="btn btn-primary btn-sm buy">Купить</a>
+	<a href="#html" data-id="{{$prod->id}}" id="good-{{$prod->id}}-{{$prod->price}}" class="btn btn-primary btn-sm buy addCart"> <span class="glyphicon glyphicon-list"></span> Add to cart </a> 
   </div>
 </div>
   </div>
