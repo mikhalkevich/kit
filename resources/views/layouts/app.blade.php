@@ -47,7 +47,7 @@
             </table>
         </div>
 	    @foreach($v_categories as $cat)
-         <a href="{{asset('category/'.$cat->id)}}" class="list-group-item list-group-item-action bg-light">{{$cat->name}}</a> 
+         <a href="{{asset('category/'.$cat->id)}}" class="list-group-item list-group-item-action bg-light">{{__('base.menu.'.$cat->name)}}</a> 
 		@endforeach
       </div>
     </div>
@@ -66,18 +66,21 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
             <li class="nav-item">
-              <a class="nav-link" href="{{asset('about')}}">About</a>
+              <a class="nav-link" href="{{asset('about')}}">{{__('base.about')}}</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="{{asset('construct')}}">Contstruct</a>
+              <a class="nav-link" href="{{asset('construct')}}">{{__('base.construct')}}</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{{asset('contact')}}">{{__('base.contact')}}</a>
             </li>
 						@guest
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                                <a class="nav-link" href="{{ route('login') }}">{{ __('base.login') }}</a>
                             </li>
                             @if (Route::has('register'))
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                    <a class="nav-link" href="{{ route('register') }}">{{ __('base.register') }}</a>
                                 </li>
                             @endif
                         @else
@@ -88,12 +91,12 @@
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
 								<a class="dropdown-item" href="{{asset('home')}}" >
-                                        Кабинет пользователя
+                                        {{__('base.cabinet')}}
                                     </a>
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
-                                        {{ __('Logout') }}
+                                        {{ __('base.logout') }}
                                     </a>
 
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
@@ -102,6 +105,27 @@
                                 </div>
                             </li>
                         @endguest
+<li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                            <img id="imgNavSel" src="{{(isset($_COOKIE['lang']))?'/lang/'.$_COOKIE['lang'].'.jpg':'ru.jpg'}}" alt="..." class="img-thumbnail icon-small">&nbsp;&nbsp;
+                            <span id="lanNavSel">
+							{{(isset($_COOKIE['lang']))?$_COOKIE['lang']:'ru'}}
+							</span> <span class="caret"></span></a>
+                        <ul class="dropdown-menu mumu" role="menu">
+                            <li><a id="navFra" href="/?lang=fr" class="language">
+                                    <img id="imgNavFra" src="{{asset('lang/fr.jpg')}}" alt="France" class="img-thumbnail icon-small">&nbsp;
+                                    <span id="lanNavFra">Française</span>&nbsp;
+                                </a></li>
+                            <li><a id="navEng" href="/?lang=en" class="language">
+                                    <img id="imgNavEng" src="{{asset('lang/en.jpg')}}" alt="English" class="img-thumbnail icon-small">&nbsp;
+                                    <span id="lanNavEng">English</span>&nbsp;
+                                </a></li>
+                            <li><a id="navRus" href="/?lang=ru" class="language">
+                                    <img id="imgNavRus" src="{{asset('lang/ru.jpg')}}" alt="Russia" class="img-thumbnail icon-small">&nbsp;
+                                    <span id="lanNavRus">Русский</span>&nbsp;
+                                </a></li>
+                        </ul>
+                    </li>
           </ul>
         </div>
       </nav>

@@ -1,6 +1,9 @@
 <?php
 Auth::routes();
-Route::get('/','BaseController@getIndex');
+Route::group(['middleware'=>['lang']], function(){
+	Route::get('/','BaseController@getIndex');
+});
+
 Route::get('category/{id}', 'CategoryController@getIndex');
 Route::get('basket', 'BasketController@getIndex');
 Route::get('basket/delete/{id}', 'BasketController@getDelete');
